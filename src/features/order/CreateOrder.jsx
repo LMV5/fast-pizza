@@ -4,7 +4,7 @@ import Button from "../../ui/Button";
 
 const isValidPhone = (str) =>
   /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(
-    str,
+    str
   );
 
 const fakeCart = [
@@ -79,7 +79,7 @@ function CreateOrder() {
 
         <div>
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
-          <Button disabled={isSubmitting}>
+          <Button type="primary" disabled={isSubmitting}>
             {isSubmitting ? "Placing order..." : "Order now"}
           </Button>
         </div>
